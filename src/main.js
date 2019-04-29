@@ -3,13 +3,17 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import FrameScore from './components/scoreboard/FrameScore'
 
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
-new Vue({
+const vm = new Vue({
   el: '#app',
   router,
-  components: { App },
+  components: {
+    App,
+    'frame-score': FrameScore
+  },
   template: '<App/>'
 })
+vm.$mount('#app')
